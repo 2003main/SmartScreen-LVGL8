@@ -98,48 +98,6 @@
 | **AI服务** | Qwen · DeepSeek · 标准 WebSocket 协议接入 |
 
 ---
-
-## 📁 目录结构
-
-```
-xiaozhi-linux-t113/
-├── CMakeLists.txt              # 构建配置
-├── toolchain-t113.cmake        # 交叉编译工具链
-├── README.md
-│
-├── src/
-│   ├── main.c                  # 入口 & 初始化
-│   ├── audio/
-│   │   ├── audio_capture.c     # ALSA 音频采集
-│   │   ├── audio_player.c      # ALSA 异步播放
-│   │   └── opus_codec.c        # Opus 编解码
-│   ├── network/
-│   │   ├── websocket_client.c  # WebSocket 通信
-│   │   └── http_request.c      # HTTP 工具
-│   ├── ai/
-│   │   └── ai_session.c        # ASR/LLM/TTS 会话管理
-│   ├── fsm/
-│   │   └── state_machine.c     # 有限状态机
-│   ├── ui/
-│   │   ├── ui_main.c           # LVGL8 主界面
-│   │   ├── ui_chat.c           # 对话气泡显示
-│   │   └── ui_status.c         # 状态图标动画
-│   └── driver/
-│       ├── mipi_screen.c       # MIPI 屏初始化
-│       ├── i2c_dev.c           # I2C 外设
-│       └── gpio_key.c          # 按键输入
-│
-├── include/                    # 头文件
-├── lib/                        # 第三方库（opus、lvgl）
-├── config/
-│   └── config.json             # 服务地址 & API Key 配置
-└── scripts/
-    ├── build.sh                # 一键编译脚本
-    └── deploy.sh               # 一键部署脚本
-```
-
----
-
 ## ⚙ 快速开始
 
 ### 环境依赖
